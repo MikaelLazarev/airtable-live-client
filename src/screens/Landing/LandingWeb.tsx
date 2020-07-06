@@ -6,9 +6,8 @@
  *
  */
 import React, { useEffect } from "react";
-
 import { useDispatch, useSelector } from "react-redux";
-
+import { Helmet } from "react-helmet";
 import { RootState } from "../../store";
 
 import actions from "../../store/actions";
@@ -16,14 +15,14 @@ import { STATUS } from "../../store/utils/status";
 import { Loading } from "../../components/Loading";
 import { getDetailsItem } from "../../store/dataloader";
 import { DataScreen } from "../../components/DataLoader/DataScreen";
-import {WebRenderer} from "../../components/Web/WebRenderer";
-import {RouteComponentProps} from "react-router";
+import { WebRenderer } from "../../components/Web/WebRenderer";
+import { RouteComponentProps } from "react-router";
 
 interface MatchParams {
   id: string;
 }
 
-interface LandingWebProps extends RouteComponentProps <MatchParams> {}
+interface LandingWebProps extends RouteComponentProps<MatchParams> {}
 
 export const LandingWebScreen: React.FC<LandingWebProps> = ({
   match: {
@@ -31,6 +30,8 @@ export const LandingWebScreen: React.FC<LandingWebProps> = ({
   },
 }: LandingWebProps) => {
   const dispatch = useDispatch();
+
+  id = id || 'landing';
 
   useEffect(() => {
     dispatch(actions.webpage.getDetails(id));
@@ -40,8 +41,6 @@ export const LandingWebScreen: React.FC<LandingWebProps> = ({
     getDetailsItem(state.webpage.Details, id)
   );
 
-  console.log("KOOLA", dataItem);
-
   if (!dataItem || !dataItem.data || dataItem.status === STATUS.LOADING) {
     return <Loading />;
   }
@@ -50,6 +49,7 @@ export const LandingWebScreen: React.FC<LandingWebProps> = ({
 
   return (
     <div className="content content-fixed">
+      <Helmet title={"AirTableLive"} />
       <DataScreen data={data} status={status} component={WebRenderer} />
     </div>
   );

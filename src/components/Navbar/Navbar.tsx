@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, {  useState } from "react";
 import {
   Navbar,
   Nav,
@@ -47,29 +47,17 @@ export const NavbarPage: React.FC<NavbarPageProps> = ({ data }) => {
       expand="lg"
       fixed="top"
       className={"navbar-custom sticky sticky-dark navbar-dark " + navClass}
-      style={{marginTop: '50px', backgroundColor: "none"}}
     >
       <Container>
         <NavbarBrand className="logo text-uppercase" href="/">
-          {imglight === true ? (
             <img
               src={
-                "https://storage.googleapis.com/airtable-live/logo-light.png"
+                "https://storage.googleapis.com/airtable-live/logo.png"
               }
               alt=""
               className="logo-light"
               height="20"
             />
-          ) : (
-            <img
-              src={
-                "https://storage.googleapis.com/airtable-live/logo-dark.png"
-              }
-              alt=""
-              className="logo-dark"
-              height="20"
-            />
-          )}
         </NavbarBrand>
         <NavbarToggler onClick={toggle} style={{color: "black", borderColor: "black"}}>
           <i className="mdi mdi-menu"><Menu /></i>
