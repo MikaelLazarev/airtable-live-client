@@ -17,23 +17,20 @@ import { Loading } from "../../components/Loading";
 import { getDetailsItem } from "../../store/dataloader";
 import { DataScreen } from "../../components/DataLoader/DataScreen";
 import {WebRenderer} from "../../components/Web/WebRenderer";
+import {RouteComponentProps} from "react-router";
 
 interface MatchParams {
   id: string;
-  tab?: string;
 }
 
-interface LandingWebProps {}
-// extends RouteComponentProps<MatchParams> {}
+interface LandingWebProps extends RouteComponentProps <MatchParams> {}
 
 export const LandingWebScreen: React.FC<LandingWebProps> = ({
-  // match: {
-  //   params: { id },
-  // },
+  match: {
+    params: { id },
+  },
 }: LandingWebProps) => {
   const dispatch = useDispatch();
-
-  const id="landing";
 
   useEffect(() => {
     dispatch(actions.webpage.getDetails(id));

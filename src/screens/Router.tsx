@@ -13,7 +13,7 @@ export const Router: React.FC = () => {
   return (
     <Switch>
       <Route path="/:id" exact={true} component={withTracker(LandingWebScreen)} />
-      <Route path={"*"} component={withTracker(LandingWebScreen)} />
+      <Route path={"*"} component={withTracker(LandingWebScreen)}/>
     </Switch>
   );
 };
