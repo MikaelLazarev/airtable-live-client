@@ -12,7 +12,7 @@ export class FooterCopy extends Component {
                 <a href="#">
                   <img
                     src={
-                      "https://storage.googleapis.com/airtable-live/logo-light.png"
+                      "https://storage.googleapis.com/airtable-live/logo_white.png"
                     }
                     alt=""
                     height="20"
@@ -21,7 +21,10 @@ export class FooterCopy extends Component {
               </div>
               <div className="float-sm-right mt-4 mt-sm-0">
                 <p className="copyright-desc text-white mb-0">
-                  Created by <a href={"https://airtable.live/"} >AirTable Live</a>
+                  Created with love &{" "}
+                  <a href={"https://airtable.live/"} style={{ color: "white" }}>
+                    AirTable Live
+                  </a>
                 </p>
               </div>
             </Col>

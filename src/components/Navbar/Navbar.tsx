@@ -28,7 +28,6 @@ export const NavbarPage: React.FC<NavbarPageProps> = ({ data }) => {
   };
 
   const navClass = "navbar-dark";
-  const imglight = true;
 
   const menuItems = data
     .filter((block) => block.showInMenu)
@@ -52,7 +51,7 @@ export const NavbarPage: React.FC<NavbarPageProps> = ({ data }) => {
         <NavbarBrand className="logo text-uppercase" href="/">
             <img
               src={
-                "https://storage.googleapis.com/airtable-live/logo.png"
+                "https://storage.googleapis.com/airtable-live/logo_color.png"
               }
               alt=""
               className="logo-light"
