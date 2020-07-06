@@ -8,7 +8,6 @@
 import React, { useEffect } from "react";
 
 import { useDispatch, useSelector } from "react-redux";
-import { RouteComponentProps, useHistory } from "react-router";
 
 import { RootState } from "../../store";
 

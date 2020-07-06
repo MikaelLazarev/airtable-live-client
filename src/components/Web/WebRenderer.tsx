@@ -20,7 +20,9 @@ export const WebRenderer: React.FC<WebRendererProps> = ({ data }) => {
   console.log("KKOLA", realBlocks);
   // @ts-ignore
   const renderedBlocks = blocks.map((b) =>
+      // @ts-ignore
     LandingsBlocks[b.block.block.type].blockLanding({
+        // @ts-ignore
       json: JSON.stringify(b.block.data),
     })
   );

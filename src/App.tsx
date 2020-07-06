@@ -7,7 +7,6 @@
 import React, { useState } from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import * as Sentry from "@sentry/browser";
 import ReactGA from "react-ga";
 
 import { Router } from "./screens/Router";
@@ -18,11 +17,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const store = configureStore();
 
 // Sentry
-if (process.env.NODE_ENV === "production") {
-  Sentry.init({
-    dsn: "https://cd19416ad99349d0bc8df4b50b374d4e@sentry.io/3026714",
-  });
-}
+// if (process.env.NODE_ENV === "production") {
+//   Sentry.init({
+//     dsn: "https://cd19416ad99349d0bc8df4b50b374d4e@sentry.io/3026714",
+//   });
+// }
 
 // Google analytics
 ReactGA.initialize(GA_TRACKER);

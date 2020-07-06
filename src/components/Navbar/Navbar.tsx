@@ -13,7 +13,8 @@ import {
 
 import { ScrollspyNav } from "./scrollSpy";
 import { Block, getSectionId } from "../../core/block";
-import FeatherIcon from 'feather-icons-react';
+import { Menu } from 'react-feather';
+
 
 export interface NavbarPageProps {
   data: Block[];
@@ -71,7 +72,7 @@ export const NavbarPage: React.FC<NavbarPageProps> = ({ data }) => {
           )}
         </NavbarBrand>
         <NavbarToggler onClick={toggle} style={{color: "black", borderColor: "black"}}>
-          <i className="mdi mdi-menu"><FeatherIcon icon={"menu"}/></i>
+          <i className="mdi mdi-menu"><Menu /></i>
         </NavbarToggler>
 
         <Collapse id="navbarCollapse" isOpen={isOpenMenu} navbar>
