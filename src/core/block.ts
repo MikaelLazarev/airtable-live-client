@@ -4,6 +4,7 @@ import {CounterBlockLanding} from "../components/Counter/CoutnerBlockLanding";
 import {HeroBlockLanding} from "../components/Hero/HeroBlockLanding";
 import {ServiceBlockLanding} from "../components/Service/ServiceBlockLanding";
 import {TestimonialBlockLanding} from "../components/Testimonials/TestimonialBlockLanding";
+import {FooterBlockLanding} from "../components/Footer/FooterBlockLanding";
 
 export type BlockType =
   | "Hero"
@@ -45,7 +46,7 @@ export const LandingsBlocks: Record<BlockType, BlockRender> = {
     renderInSection: true,
   },
   Footer: {
-    blockLanding: TestimonialBlockLanding,
+    blockLanding: FooterBlockLanding,
     renderInSection: false,
   },
 };

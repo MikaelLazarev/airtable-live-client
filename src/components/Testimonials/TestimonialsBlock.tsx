@@ -27,7 +27,7 @@ export const TestimonialsBlock: React.FC<TestimonialsBlockProps> = ({
               <Media className="pt-3">
                 <div className="avatar-md mr-3">
                   <span className="avatar-title rounded-circle bg-soft-primary text-primary font-16">
-                    {client.name.charAt(0)}
+                    {(client.name || "   ").charAt(0)}
                   </span>
                 </div>
                 <Media body className="align-self-center">
