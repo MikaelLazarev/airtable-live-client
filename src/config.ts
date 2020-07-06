@@ -9,12 +9,12 @@
 export const BACKEND_ADDR =
   process.env.NODE_ENV === "development"
     ? "http://localhost:4000"
-    : "http://localhost:4000";
+    : "https://airtablelive-server.herokuapp.com/";
 
 export const SSO_ADDR =
   process.env.NODE_ENV === "development"
     ? "http://localhost:4000"
-    : "http://localhost:4000";
+    : "https://airtablelive-server.herokuapp.com/";
 
 export const GA_TRACKER = "UA-171397157-1";
 
